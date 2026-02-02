@@ -19,7 +19,11 @@ x-n8n: &service-n8n
     - N8N_PERSONALIZATION_ENABLED=false
     - N8N_ENCRYPTION_KEY
     - N8N_USER_MANAGEMENT_JWT_SECRET
+    - GENERIC_TIMEZONE=Europe/Berlin
+    - TZ="Europe/Berlin"
     - OLLAMA_HOST=${OLLAMA_HOST:-ollama:11434}
+    - N8N_EDITOR_BASE_URL=https://n8n.lucasaur.com/
+    - WEBHOOK_URL=https://n8n.lucasaur.com/
   env_file:
     - path: .env
       required: true
